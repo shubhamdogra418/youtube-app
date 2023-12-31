@@ -4,11 +4,11 @@ import VideoContainer from './VideoContainer'
 
 const MainContainer = () => {
   return (
-    <div>
+    <div className='rounded-lg ml-2'>
         <ButtonList/>
         <VideoContainer/>
     </div>
   )
 }
 
-export default MainContainer
+export default MainContainer;

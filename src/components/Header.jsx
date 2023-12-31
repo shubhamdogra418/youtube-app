@@ -16,14 +16,18 @@ const Header = () => {
                 onClick={() => toggleMenuHandler()} 
                 className='rounded-md p-5 cursor-pointer' alt="menu" 
                 src={Hamburger_Menu}/>
-            <img className='w-40 h-20' src={Logo} alt="logo"/>
+            <img 
+                className='w-40 h-20  cursor-pointer' 
+                src={Logo} alt="logo"/>
         </div>
 
         <div className='mt-5 w-8/12'>
             <input className='p-2 w-8/12 text-center rounded-md font-bold border border-black' type='text' placeholder='Search'/> 
             <button className='bg-red-600 text-white ml-4 p-2 rounded-md font-bold'> Search 🔍</button>
         </div>
-        <img className='p-2' src={user_avatar} alt="avatar"/>
+        <img 
+            className='p-2 cursor-pointer'   
+            src={user_avatar} alt="avatar"/> 
     </div>
   )
 }

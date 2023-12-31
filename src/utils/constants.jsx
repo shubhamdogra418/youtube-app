@@ -4,4 +4,7 @@ export const user_avatar="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANsAAADm
 export const user_avatarF="https://c8.alamy.com/comp/2JM9B96/funny-cartoon-woman-face-cute-avatar-or-portrait-girl-with-dark-hair-young-character-for-web-in-flat-style-print-for-sticker-emoji-icon-2JM9B96.jpg";
 export const user_both="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3vKUlZrOOf_cgE9SWbM_J1Pg6X6sqHbsh9w&usqp=CAU";
 export const user_hunk="https://thumbs.dreamstime.com/z/student-avatar-illustration-user-profile-icon-youth-avatar-student-avatar-illustration-simple-cartoon-user-portrait-user-profile-276214170.jpg";
-    
+
+const Google_API_KEY= "AIzaSyBjsQLI7Xa8LNCSK3Bh-xxmXZbc8sd1MLs"; 
+export const Youtube_API="https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key="+Google_API_KEY;
+

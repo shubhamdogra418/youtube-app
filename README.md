@@ -12,5 +12,7 @@
             - Video Cards
 - Header
 - Sidebar
-- collapesble Hamburger Menu using Redux 
+- Collapesble Hamburger Menu using Redux 
+- Video Container
+    - Props Drilling
 
