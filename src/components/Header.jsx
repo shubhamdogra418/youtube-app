@@ -2,12 +2,16 @@ import React, {useEffect, useState} from 'react';
 import { Hamburger_Menu, Youtube_Search_API, user_avatar } from '../utils/constants';
 import { Logo } from '../utils/constants'; 
 import { toggleMenu } from '../utils/appSlice';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { cacheResults } from '../utils/searchSlice';
 
 const Header = () => {
+    const dispatch= useDispatch();
     const[searchQuery, setSearchQuery] = useState("");
     const [suggestions, setSuggestions]= useState([]);
     const [showSuggestions, setShowSuggestions] =useState(false);
+
+    const searchCache= useSelector((store)=> store.search);
 
     useEffect (()=> {
         //make api call on every search query 
@@ -15,8 +19,11 @@ const Header = () => {
         // ignore / decline the API call
         //I want to make API call only after 200ms
         const timer= setTimeout(() => {
-            // console.log("APi call made--", searchQuery)
-            getSearchSuggestions();
+            if(searchCache[searchQuery]) {
+                setSuggestions(searchCache[searchQuery]);
+            } else {
+                getSearchSuggestions();
+            }   
         }, 300);
         return  ()=> {
             clearTimeout(timer);
@@ -27,9 +34,15 @@ const Header = () => {
         const data= await  fetch(Youtube_Search_API + searchQuery);
         const json= await data.json();
         setSuggestions(json[1]);
+
+        //update cache
+        dispatch(
+            cacheResults({
+                [searchQuery]: json[1],
+            })
+        )
     }
 
-    const dispatch = useDispatch();
     const toggleMenuHandler =() => {
         dispatch(toggleMenu());
     }

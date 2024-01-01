@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { closeMenu } from '../utils/appSlice';
 import { useSearchParams } from 'react-router-dom';
+import CommentsContainer from './CommentsContainer';
 
 const WatchPage = () => {
     const dispatch= useDispatch();
@@ -11,7 +12,8 @@ const WatchPage = () => {
         dispatch(closeMenu());
     },[])
   return (
-    <div>
+    <div className=''>
+    <div className=''>
       <iframe 
           className='ml-9 mt-5 rounded-lg'
           width="640" 
@@ -22,6 +24,8 @@ const WatchPage = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
         allowFullScreen></iframe>
     </div>
+    <CommentsContainer/>
+    </div> 
   )
 }
 
