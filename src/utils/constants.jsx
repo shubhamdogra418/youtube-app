@@ -8,3 +8,4 @@ export const user_hunk="https://thumbs.dreamstime.com/z/student-avatar-illustrat
 const Google_API_KEY= "AIzaSyBjsQLI7Xa8LNCSK3Bh-xxmXZbc8sd1MLs"; 
 export const Youtube_API="https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key="+Google_API_KEY;
 
+export const Youtube_Search_API="http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";

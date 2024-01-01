@@ -16,4 +16,8 @@
 - Video Container
     - Props Drilling
 - useSearchParams
+- HOFs  
+- Debouncing
+    - only make API call after a certain threshold
+- making Search work, showing search results
 

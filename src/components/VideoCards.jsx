@@ -13,6 +13,15 @@ const VideoCards = ({ info }) => {
         <h4> {Math.round(statistics.viewCount/1000000)+1}M views </h4>
     </div>
   )
-}
+};
+
+//writing a HOF
+   export function adVideoCard ({ info }) {
+    return (
+      <div className='border border-red-500'>
+        <VideoCards/>
+      </div>
+    )
+  }
 
 export default VideoCards;
