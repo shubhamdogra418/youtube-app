@@ -19,5 +19,10 @@
 - HOFs  
 - Debouncing
     - only make API call after a certain threshold
-- making Search work, showing search results
+- Making Search work, showing search results
+- Nested Comments
+- Live Chat >> Infinite Scroll >> Pagination
+- Made Live Chat >>> Chat Messages
+- ChatSlice in redux store
+- Live Chat Optimisation using Splice (not bloat and keep runnig)
 

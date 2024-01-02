@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { Hamburger_Menu, Youtube_Search_API, user_avatar } from '../utils/constants';
+import { Hamburger_Menu, Youtube_Search_API, commentor, user_avatar } from '../utils/constants';
 import { Logo } from '../utils/constants'; 
 import { toggleMenu } from '../utils/appSlice';
 import { useDispatch, useSelector } from 'react-redux';
@@ -82,8 +82,8 @@ const Header = () => {
             </div>) }
         </div> 
         <img 
-            className='p-2 cursor-pointer'   
-            src={user_avatar} alt="avatar"/> 
+            className='p-2 pr-4 cursor-pointer'   
+            src={commentor} alt="avatar"/> 
     </div>
   )
 }
