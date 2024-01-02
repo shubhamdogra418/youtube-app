@@ -1,15 +1,17 @@
 import React, {useEffect, useState} from 'react';
-import { Hamburger_Menu, Youtube_Search_API, commentor, user_avatar } from '../utils/constants';
+import { Hamburger_Menu, Youtube_Search_API, commentor} from '../utils/constants';
 import { Logo } from '../utils/constants'; 
 import { toggleMenu } from '../utils/appSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { cacheResults } from '../utils/searchSlice';
+import { moon } from '../utils/constants';
 
 const Header = () => {
     const dispatch= useDispatch();
     const[searchQuery, setSearchQuery] = useState("");
     const [suggestions, setSuggestions]= useState([]);
     const [showSuggestions, setShowSuggestions] =useState(false);
+    
 
     const searchCache= useSelector((store)=> store.search);
 
@@ -47,14 +49,14 @@ const Header = () => {
         dispatch(toggleMenu());
     }
   return (
-    <div className='flex h-20 justify-between shadow-lg'>
+    <div className='flex h-20 justify-between shadow-lg '>
         <div className='flex'>
             <img
                 onClick={() => toggleMenuHandler()} 
                 className='rounded-md p-5 cursor-pointer' alt="menu" 
                 src={Hamburger_Menu}/>
             <img 
-                className='w-40 h-20  cursor-pointer' 
+                className='w-40 h-20 rounded-lg' 
                 src={Logo} alt="logo"/>
         </div>
 
@@ -80,7 +82,10 @@ const Header = () => {
                     }
                 </ul>
             </div>) }
-        </div> 
+        </div>
+         <img 
+            className=' h-8 w-15 mt-6 rounded-full cursor-pointer'
+            src={moon} alt="theme" />
         <img 
             className='p-2 pr-4 cursor-pointer'   
             src={commentor} alt="avatar"/> 
